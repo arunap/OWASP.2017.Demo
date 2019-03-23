@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+    ol {
+        font-size: larger;
+    }
+</style>
+
+<div class="jumbotron">
+    <h1>OWASP Top 10 Demonstration</h1>
+    <p class="lead">Prepared for Security CEG to provide better understanding of vulnerability causes by Aruna Perera.</p>
+    <p><a href="https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <ol>
+            <li>
+                <h3>Injection</h3>
+                <p>
+                    SQL injection, LDAP injection, and CRLF injection, occur when an attacker sends untrusted data to an interpreter that is executed as a command without proper authorization.
+                </p>
+                <p>
+                    @Html.ActionLink("Learn more", "Index", "Injection", null, new { @class = "btn btn-default" })
+                </p>
+            </li>
+            <li>
+                <h3>Broken Authentication</h3>
+                <p>
+                    Credential stuffing, the use of lists of known passwords, is a common attack.
+                    Most authentication attacks occur due to the continued use of passwords as a sole factor.
+                    Application session timeouts aren’t set properly. A user uses a public computer to access an application
+                </p>
+                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+            </li>
+            <li>
+                <h3>Sensitive Data Exposure</h3>
+                <p>
+                    An application encrypts credit card numbers in a database using automatic database encryption.
+                    A site doesn't use or enforce TLS for all pages or supports weak encryption.
+                    : The password database uses unsalted or simple hashes to store everyone's passwords.
+                </p>
+                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+            </li>
+            <li>
+                <h3>XML External Entities (XXE)</h3>
+                <p>
+                    Poorly configured XML processors evaluate external entity references within XML documents. Attackers can use external entities for attacks including remote code execution, and to disclose internal files and SMB file shares.
+                </p>
+                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+            </li>
+            <li>
+                <h3>Broken Access Control</h3>
+                <p>
+                    Improperly configured or missing restrictions on authenticated users allow them to access unauthorized functionality or data, such as accessing other users’ accounts, viewing sensitive documents, and modifying data and access rights.
+                </p>
+                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+            </li>
+            <li>
+                <h3>Security Misconfiguration</h3>
+                <p>
+                    This risk refers to improper implementation of controls intended to keep application data safe, such as misconfiguration of security headers, error messages containing sensitive information (information leakage), and not patching or upgrading systems, frameworks, and components.
+                </p>
+                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+            </li>
+            <li>
+                <h3>Cross-Site Scripting (XSS)</h3>
+                <p>
+                    Cross-site scripting (XSS) flaws give attackers the capability to inject client-side scripts into the application, for example, to redirect users to malicious websites.
+                </p>
+                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+            </li>
+            <li>
+                <h3>Insecure Deserialization</h3>
+                <p>
+                    Insecure deserialization flaws can enable an attacker to execute code in the application remotely, tamper or delete serialized (written to disk) objects, conduct injection attacks, and elevate privileges.
+                </p>
+                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+            </li>
+            <li>
+                <h3>Using Components with Known Vulnerabilities</h3>
+                <p>
+                    Developers frequently don’t know which open source and third-party components are in their applications, making it difficult to update components when new vulnerabilities are discovered. Attackers can exploit an insecure component to take over the server or steal sensitive data.
+                </p>
+                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+            </li>
+            <li>
+                <h3>Insufficient Logging & Monitoring</h3>
+                <p>
+                    The time to detect a breach is frequently measured in weeks or months. Insufficient logging and ineffective integration with security incident response systems allow attackers to pivot to other systems and maintain persistent threats.
+                </p>
+                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+            </li>
+        </ol>
+    </div>
+</div>
