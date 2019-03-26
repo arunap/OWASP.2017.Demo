@@ -33,7 +33,7 @@
                     Most authentication attacks occur due to the continued use of passwords as a sole factor.
                     Application session timeouts aren’t set properly. A user uses a public computer to access an application
                 </p>
-                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+                <p>@Html.ActionLink("Learn more", "Login", "BrokenAuthentication", null, new { @class = "btn btn-default" })</p>
             </li>
             <li>
                 <h3>Sensitive Data Exposure</h3>
@@ -42,7 +42,10 @@
                     A site doesn't use or enforce TLS for all pages or supports weak encryption.
                     : The password database uses unsalted or simple hashes to store everyone's passwords.
                 </p>
-                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+                <p>
+                    @Html.ActionLink("Learn more", "Index", "SensitiveDataExposure", null, new { @class = "btn btn-default" })
+
+                </p>
             </li>
             <li>
                 <h3>XML External Entities (XXE)</h3>

@@ -1,0 +1,61 @@
+﻿@model IEnumerable<OWASP.Top10.ViewModels.FilmViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>&nbsp;</p>
+<form action="/GetFilmDetails" method="post">
+    <div class="form-group">
+        <label for="sel1">Select a film category:</label>
+        @Html.DropDownList("FilmList", (IEnumerable<SelectListItem>)ViewBag.FilmList, new { @class = "form-control" })
+    </div>
+</form>
+<p>&nbsp;</p>
+<div class="row">
+    <div class="col-md-12">
+        <table id="dtBasicExample" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Rating</th>
+                    <th>Rental</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody  ></tbody>
+        </table>
+    </div>
+</div>
+
+<input type="hidden" name="selectedFilmId" value="0" />
+@section scripts{
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            getGridViewData();
+
+            $("#FilmList").on("change", function () {
+
+                getGridViewData();
+            });
+        });
+
+        function getGridViewData() {
+            var url = "SensitiveDataExposure/GetFilmDetails/" + $('#FilmList').val();
+            $.get(url, function (data, status) {
+
+                var table = $('#dtBasicExample');
+                table.find("tbody tr").remove();
+                console.log(data);
+                data.forEach(function (film) {
+                    $('#dtBasicExample tbody').append("<tr><td>" + film.Title + "</td><td>" + film.Description + "</td><td>" + film.Rating + "</td><td>" + film.Rental + "</td><td>" + film.CategoryName + "</td></tr>");
+                });
+            });
+        }
+    </script>
+}

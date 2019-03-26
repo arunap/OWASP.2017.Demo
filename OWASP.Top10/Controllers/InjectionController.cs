@@ -14,7 +14,7 @@ namespace OWASP.Top10.Controllers
         // GET: Injection
         public ActionResult Index()
         {
-            var dt = DbHelper.ExecuteSelectCommand("select * from customer order by first_name limit 20;");
+            var dt = DbHelper.ExecuteSelectCommand("select customer_id,first_Name, last_Name,email, last_update from customer order by first_name limit 20;");
             var list = new List<CustomerViewModel>();
 
             foreach (DataRow row in dt.Rows)
@@ -33,7 +33,7 @@ namespace OWASP.Top10.Controllers
         [HttpPost]
         public ActionResult Index(string searchQuery)
         {
-            string query = $"select * from customer where first_name like '%{searchQuery}%';";
+            string query = $"select customer_id,first_Name, last_Name,email, last_update from customer where first_name like '%{searchQuery}%';";
             var dt = DbHelper.ExecuteSelectCommand(query);
             var list = new List<CustomerViewModel>();
 

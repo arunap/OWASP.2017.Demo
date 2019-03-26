@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "UserInformation";
+}
+
+<h2>UserInformation</h2>
+@if (ViewBag.IsAdmin == true)
+{
+    <h1>Hi there, Now you're acting as an Administrator.</h1>
+}
+else
+{ <h1>You don't have Administrator access.</h1>
+}
+
