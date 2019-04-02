@@ -59,21 +59,22 @@
                 <p>
                     Improperly configured or missing restrictions on authenticated users allow them to access unauthorized functionality or data, such as accessing other users’ accounts, viewing sensitive documents, and modifying data and access rights.
                 </p>
-                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+                <p>  @Html.ActionLink("Learn more", "Index", "SecurityMisconfiguration", null, new { @class = "btn btn-default" })</p>
             </li>
             <li>
                 <h3>Security Misconfiguration</h3>
                 <p>
                     This risk refers to improper implementation of controls intended to keep application data safe, such as misconfiguration of security headers, error messages containing sensitive information (information leakage), and not patching or upgrading systems, frameworks, and components.
                 </p>
-                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+                <p>  @Html.ActionLink("Learn more", "Index", "SecurityMisconfiguration", null, new { @class = "btn btn-default" })</p>
+
             </li>
             <li>
                 <h3>Cross-Site Scripting (XSS)</h3>
                 <p>
                     Cross-site scripting (XSS) flaws give attackers the capability to inject client-side scripts into the application, for example, to redirect users to malicious websites.
                 </p>
-                <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+                <p>  @Html.ActionLink("Learn more", "Index", "CrossSiteScripting", null, new { @class = "btn btn-default" })</p>
             </li>
             <li>
                 <h3>Insecure Deserialization</h3>

@@ -25,8 +25,12 @@ namespace OWASP.Top10.Controllers
             FormsAuthentication.SetAuthCookie(username, false);
 
             HttpCookie userInfo = new HttpCookie("userInfo");
+            //userInfo.Secure = true;
+            //userInfo.HttpOnly = true;
+            //userInfo.sa
             userInfo["UserName"] = username;
             userInfo["IsAdmin"] = "false";
+            userInfo["Test"] = "1";
             userInfo.Expires.Add(new TimeSpan(1, 0, 0));
             Response.Cookies.Add(userInfo);
 
