@@ -9,7 +9,7 @@ namespace OWASP.Top10.Helpers
 {
     public static class DbHelper
     {
-        private const string connectionString = "Server=localhost;Database=sakila;Uid=root;Pwd=''; Connection Timeout=30";
+        private const string connectionString = "Server=localhost;Database=sakila;Uid=sakila_admin_user;Pwd=Pa$$w0rd; Connection Timeout=30";
 
         public static DataTable ExecuteSelectCommand(string command)
         {

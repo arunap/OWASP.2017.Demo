@@ -8,5 +8,6 @@ namespace OWASP.Top10.ViewModels
     public class CommentViewModel
     {
         public string Comment { get; set; }
+        public string InsertedOn { get;  set; }
     }
 }

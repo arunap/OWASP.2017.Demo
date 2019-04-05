@@ -2,6 +2,7 @@
     ViewBag.Title = "Home Page";
 }
 
+
 <style>
     ol {
         font-size: larger;
@@ -13,7 +14,11 @@
     <p class="lead">Prepared for Security CEG to provide better understanding of vulnerability causes by Aruna Perera.</p>
     <p><a href="https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
-
+@*@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <input type="text" name="name" value="" />
+}*@
 <div class="row">
     <div class="col-md-12">
         <ol>

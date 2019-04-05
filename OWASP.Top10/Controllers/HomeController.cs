@@ -8,8 +8,13 @@ namespace OWASP.Top10.Controllers
 {
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
+            HttpCookie cookie = new HttpCookie("OWASP.TOP.10");
+            cookie["ApplicationName"] = "Cyber Security Training";
+            cookie["HostedBy"] = "Security CEG";
+            Response.Cookies.Add(cookie);
             return View();
         }
 
