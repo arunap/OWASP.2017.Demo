@@ -159,6 +159,8 @@
     <Compile Include="ViewModels\RegisterViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\sakila-data.sql" />
+    <Content Include="App_Data\sakila-schema.sql" />
     <Content Include="App_Data\sql-injection-samples.txt" />
     <Content Include="App_Data\xss-samples.txt" />
     <Content Include="Content\bootstrap-theme.css" />
