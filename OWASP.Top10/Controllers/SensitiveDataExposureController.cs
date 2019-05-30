@@ -10,7 +10,7 @@ using System.Web.Script.Serialization;
 
 namespace OWASP.Top10.Controllers
 {
-    public class SensitiveDataExposureController : Controller
+    public class SensitiveDataExposureController : BaseController
     {
         // GET: SensitiveDataExposure
         public ActionResult Index()

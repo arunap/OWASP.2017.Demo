@@ -8,7 +8,7 @@ using System.Web.Security;
 
 namespace OWASP.Top10.Controllers
 {
-    public class BrokenAuthenticationController : Controller
+    public class BrokenAuthenticationController : BaseController
     {
         public ActionResult Login()
         {

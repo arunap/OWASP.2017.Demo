@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace OWASP.Top10.Controllers
 {
-    public class SecurityMisconfigurationController : Controller
+    public class SecurityMisconfigurationController : BaseController
     {
         // GET: SecurityMisconfiguration
         public ActionResult GetDetails(int id)

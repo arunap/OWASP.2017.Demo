@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace OWASP.Top10.Controllers
 {
-    public class CrossSiteScriptingController : Controller
+    public class CrossSiteScriptingController : BaseController
     {
         // GET: CrossSiteScripting
         public ActionResult Index()

@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace OWASP.Top10.Controllers
 {
-    public class InjectionController : Controller
+    public class InjectionController : BaseController
     {
         // GET: Injection
         public ActionResult Index()
@@ -26,7 +26,7 @@ namespace OWASP.Top10.Controllers
                     Email = row["email"].ToString()
                 });
             }
-
+            ViewBag.RowCount = list.Count();
             return View(list);
         }
 
@@ -47,6 +47,7 @@ namespace OWASP.Top10.Controllers
                 });
             }
 
+            ViewBag.RowCount = list.Count();
             return View(list);
         }
     }
